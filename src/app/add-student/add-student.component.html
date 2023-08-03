@@ -1,0 +1,74 @@
+<div class="container">
+	<div class="registration mx-auto d-block w-100">
+		<div class="page-header text-center">
+			<h1>Student Details</h1>
+		</div>
+
+		<form [formGroup]="studentForm" (ngSubmit)="studentSubmitted()" id="member-registration" class="form-validate form-horizontal well" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Student Details</legend>
+				
+				<div class="form-group">
+					<label for="name">Name *</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter FullName" formControlName="name">
+					<span *ngIf="name && name.invalid && name.touched" style="color: red;">Invalid Name</span>
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="fname">Father Name *</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter FullName" formControlName="fname">
+					<span *ngIf="fname && fname.invalid && fname.touched" style="color: red;">Invalid Father Name</span>
+					<br>
+				</div>
+                <div class="form-group">
+					<label for="class">Class *</label>
+					<input type="text" class="form-control" id="class" placeholder="Enter Class" formControlName="class">
+					<span *ngIf="class && class.invalid && class.touched" style="color: red;">Invalid class</span>
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="addmission">DOA *</label>
+					<input type="date" class="form-control" id="date" placeholder="Enter DOA in yyyy-mm-dd" formControlName="addmission">
+					<span *ngIf="addmission && addmission.invalid && addmission.touched" style="color: red;">Invalid  DOA</span>
+					<br>
+				</div>
+                <div class="form-group">
+					<label for="house">House *</label>
+					<input type="text" class="form-control" id="house" placeholder="Enter House" formControlName="house">
+					<span *ngIf="house && house.invalid && house.touched" style="color: red;">Invalid House</span>
+					<br>
+				</div>
+                
+				<div class="form-group">
+					<label for="email">Email *</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter Email" formControlName="email">
+					<span *ngIf="email && email.invalid && email.touched" style="color: red;">Invalid Email</span>
+					<br>
+				</div>
+			   <div class="form-group">
+					<label for="contact">Phone *</label>
+					<input type="text" class="form-control" id="contact" placeholder="Enter Phone" formControlName="contact">
+					<span *ngIf="contact && contact.invalid && contact.touched" style="color: red;">Invalid Phone no.</span>
+					<br>
+
+				</div>	   
+				  <div class="form-group">
+					<label for="address">Address *</label>
+					<input type="text" class="form-control" id="address" placeholder="Enter Address" formControlName="address">
+					<span *ngIf="address && address.invalid && address.touched" style="color: red;">Invalid address</span>
+					<br>
+
+				</div>
+	
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="form-group d-flex justify-content-start">
+						<button [disabled]="studentForm.invalid" type="submit" class="btn btn-primary">Submit</button>
+					</div>
+					<div id="emailHelp" class=" form-text text-center mb-5 text-dark">Back to, <a
+							routerLink="dashboard" class="text-dark fw-bold">Dashboard</a>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>

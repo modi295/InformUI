@@ -21,6 +21,23 @@ export class AuthService {
   saveLoginData(data:any){
     return this.http.post(this.url+'Login',data);
   }
+  savestudentDetails(data:any): Observable<any>{
+    return this.http.post(this.url+'Student', data);
+
+  }
+
+  
+  getToken(){
+    return localStorage.getItem('token');
+  }
+  isLoggedIn():boolean{
+    return !!localStorage.getItem('token');
+
+  }
+  signout(){
+    localStorage.clear();
+  }
+ 
 
  
 }

@@ -25,8 +25,8 @@ export class LoginComponent {
       if(person){
         this.authservice.saveLoginData(this.loginForm.value).subscribe((result:any)=>{
           localStorage.setItem("token",result.token);
-          localStorage.setItem("user",result.insertlogin.user);
-          console.log(result)
+          localStorage.setItem("user",result.user);
+          //console.log(result)
           this.loginForm.reset();
         }
         );

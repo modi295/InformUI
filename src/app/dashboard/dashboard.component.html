@@ -1,0 +1,17 @@
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a class="btn btn-outline-secondary me-md-2" routerLink="add" role="button">Add Studnet</a>
+  </div>
+<ag-grid-angular 
+class="ag-theme-alpine"
+style="height: 535px; width: 1500px;"
+[rowData]="rowData$ | async"
+[columnDefs]="colDefs"
+[defaultColDef]="defaultColDef"
+[pagination]="true"
+[paginationPageSize]="10"
+
+>
+ 
+
+
+</ag-grid-angular>

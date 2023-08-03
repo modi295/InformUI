@@ -1,0 +1,161 @@
+/********** Popular Courses CSS Starts **********/  
+.course-list {
+    width: 100%;
+    float:left;
+    padding:0px;
+    list-style:none;
+}
+.course-list li {
+    width: 23%;
+    float: left;
+    list-style: none;
+    text-align: center;
+    padding: 20px 2px;
+    margin:1%;
+    border-radius:10px;
+}
+.course-list p {
+    color:#000;
+    font-size:18px;
+    margin-top:10px;
+    color: #fff;
+}
+.course-list i {
+    font-size:38px;
+    color: #fff;
+}
+ul.course-list li:nth-child(1) {
+    background: #2196f3;
+}
+ul.course-list li:nth-child(2) {
+    background: #ff5722;
+}
+ul.course-list li:nth-child(3) {
+    background: #8bc34a;
+}
+ul.course-list li:nth-child(4) {
+    background: #ff9800;
+}
+/********** Popular Courses CSS Ends **********/
+/********** Notice Bord and Upcoming Events CSS Starts **********/  
+.notice-board-sect {
+    background: #fff;
+    float: left;
+    margin: 0px auto;
+    display: table;
+    width: 98%;
+    padding: 15px 10px 20px 10px;
+}
+.notice-board-sect h2 {
+    font-size: 20px;
+    text-align: left;
+    padding: 10px 10px 10px 20px;
+    width: 100%;
+    float: left;
+    color: #787eff;
+}
+.notice-board {
+    width: 100%;
+    float: left;
+    border:3px solid #787eff;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.notice-board ul {
+    list-style:none;
+    width: 100%;
+    float:left;
+    padding:0px 10px 0px 5px;
+}
+.notice-board ul li {
+    width: 100%;
+    float:left;
+    font-size: 16px;
+    margin-bottom:20px;
+}
+.notice-board img {
+    margin-right: 5px;
+    margin-left: 5px;
+    width:35px;
+}
+
+/********** Principal Info CSS Starts **********/  
+.principal-img img {
+    width:300px;
+    border:5px solid #787eff;
+    padding:4px 
+}
+.principal-info {
+    width: 100%;
+    float: left;
+    padding:30px;
+}
+.principal-info h6 {
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #787eff;
+}
+.principal-info h1 {
+    color: black;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.principal-info h1 span {
+    color: #787eff;
+}
+.principal-info h5 {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    color:#585858;
+}
+.principal-info p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 25px;
+    color:#1e1e1e;
+}
+.principal-info a {
+    background: #787eff;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 20px;
+    float: left;
+    border-radius: 5px;
+}
+/********** Principal Info CSS Ends **********/
+/********** Footer CSS Starts **********/  
+.footer {
+    background-color:#1f2836;
+    padding:70px 0px;
+    width:100%;
+    float:left;
+}
+.footer-sect {
+    width:33%;
+    float:left;
+}
+.footer-sect h2 {
+    color:#fff;
+    margin-bottom: 20px;
+}
+.footer-sect p {
+    color: #fff;
+    line-height: 22px;
+    padding:0px 30px 20px 0px;
+}
+.footer-menu li {
+    width: 50%;
+    float: left;
+    margin-bottom: 10px;
+}
+.footer-menu li a {
+    color:#fff;
+    text-decoration: none;
+}
+.footer-contact li {
+    margin-bottom:15px;
+    list-style: none;
+    color: #fff;
+}
+/********** Footer CSS Ends **********/
