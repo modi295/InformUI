@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
-  constructor(private details:AuthService, private router:Router){}
+  constructor(private auth:AuthService, private router:Router){}
   log():boolean{
-    if(this.details.isLoggedIn()){
+    if(this.auth.isLoggedIn()){
       return true;
 
     }else{
@@ -18,7 +18,7 @@ export class NavComponent {
     }
   }
   logOut(){
-    this.details.signout();
+    this.auth.signout();
     this.router.navigate(['login'])
 
  }

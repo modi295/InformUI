@@ -1,15 +1,18 @@
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <a class="btn btn-outline-secondary me-md-2" routerLink="add" role="button">Add Studnet</a>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-top: 10px;">
+    <a class="btn btn-sm btn-secondary me-md-2" routerLink="add" role="button">Add Studnet</a>    
+    <button class="btn btn-sm btn-primary me-md-2" >Edit User</button>    
+    <button class="btn btn-sm btn-danger me-md-2" >Delete User</button> 
   </div>
 <ag-grid-angular 
-class="ag-theme-alpine"
-style="height: 535px; width: 1500px;"
+class="ag-theme-balham"
+style="height: 400px; width: 1500px; padding-left: 20px;padding-top: 20px;"
 [rowData]="rowData$ | async"
 [columnDefs]="colDefs"
 [defaultColDef]="defaultColDef"
 [pagination]="true"
 [paginationPageSize]="10"
 
+ 
 >
  
 

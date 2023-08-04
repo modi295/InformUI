@@ -17,7 +17,7 @@ export class DashboardComponent {
   // ];
   rowData$!: Observable<any[]>;
   colDefs: ColDef[]=[
-    {field:'name',checkboxSelection: true, headerCheckboxSelection: true,},
+    {field:'name',checkboxSelection: true, headerCheckboxSelection: true},
     {field:'fname'},
     {field:'email'},
     {field:'class'},

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -23,10 +23,8 @@ export class AuthService {
   }
   savestudentDetails(data:any): Observable<any>{
     return this.http.post(this.url+'Student', data);
-
   }
 
-  
   getToken(){
     return localStorage.getItem('token');
   }
