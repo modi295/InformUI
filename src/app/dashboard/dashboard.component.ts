@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component,OnInit } from '@angular/core';
-import { ColDef } from 'ag-grid-community';
+import { ColDef, ColumnApi, GridApi } from 'ag-grid-community';
 import { Observable } from 'rxjs';
 
 
@@ -15,6 +15,7 @@ export class DashboardComponent {
   //   {make:'Ford',model:'Mondeo',price:32000},
   //   {make:'Porsche',model:'Boxter',price:72000}
   // ];
+ 
   rowData$!: Observable<any[]>;
   colDefs: ColDef[]=[
     {field:'name',checkboxSelection: true, headerCheckboxSelection: true},
