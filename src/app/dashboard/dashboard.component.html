@@ -3,17 +3,13 @@
     <button class="btn btn-sm btn-primary me-md-2" >Edit User</button>    
     <button class="btn btn-sm btn-danger me-md-2" >Delete User</button> 
   </div>
-<ag-grid-angular 
-class="ag-theme-balham"
-style="height: 400px; width: 1500px; padding-left: 20px;padding-top: 20px;"
-[rowData]="rowData$ | async"
-[columnDefs]="colDefs"
-[defaultColDef]="defaultColDef"
-[pagination]="true"
-[paginationPageSize]="10"
- 
->
- 
-
-
-</ag-grid-angular>
+  <ag-grid-angular 
+  style="height: 360px; width: 1500px; padding-left: 20px;padding-top: 20px;"
+  class="ag-theme-balham"
+  (gridReady)="onGridReady($event)" 
+  [columnDefs]="columnDefs"
+  [rowData]="users" 
+  rowSelection="single"  
+  [pagination]="true"
+  [paginationPageSize]="10"
+  ></ag-grid-angular>  

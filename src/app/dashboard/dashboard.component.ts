@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component,OnInit } from '@angular/core';
 import { ColDef, ColumnApi, GridApi } from 'ag-grid-community';
 import { Observable } from 'rxjs';
+import { User } from './details';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -15,26 +17,33 @@ export class DashboardComponent {
   //   {make:'Ford',model:'Mondeo',price:32000},
   //   {make:'Porsche',model:'Boxter',price:72000}
   // ];
- 
-  rowData$!: Observable<any[]>;
-  colDefs: ColDef[]=[
-    {field:'name',checkboxSelection: true, headerCheckboxSelection: true},
-    {field:'fname'},
-    {field:'email'},
-    {field:'class'},
-    {field:'addmission'},
-    {field:'house'},
-    {field:'address'},
-    {field:'contact'}
-  ];
-  defaultColDef: ColDef={
-    sortable:true, filter:true
-  }
-  constructor(private http: HttpClient){}
-  
- ngOnInit(){
-  this.rowData$=this.http.get<any[]>('https://localhost:7284/Student')
- }
+
+  public users: User[] | undefined;  
+  public columnDefs: ColDef[] | undefined;  
+  // gridApi and columnApi  
+  private api!: GridApi ;  
+  constructor(private userService: AuthService, ) {  
+    this.columnDefs = this.createColumnDefs();  
+}
+ngOnInit() {  
+  this.userService.getUsers().subscribe(data => {  
+      this.users = data  
+  })  
+}  
+  onGridReady(params: { api: GridApi<any>; columnApi: ColumnApi; }): void {  
+    this.api = params.api;  
+    this.api.sizeColumnsToFit();  
+}  
+private createColumnDefs() {  
+  return [{field:'name',checkboxSelection: true, headerCheckboxSelection: true},
+  {field:'fname'},
+  {field:'email'},
+  {field:'class'},
+  {field:'addmission'},
+  {field:'house'},
+  {field:'address'},
+  {field:'contact'}]
+}  
 
 }
 

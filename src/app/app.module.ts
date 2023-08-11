@@ -17,6 +17,7 @@ import { AddStudentComponent } from './add-student/add-student.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,7 @@ import { AddStudentComponent } from './add-student/add-student.component';
     HomeComponent,
     DashboardComponent,
     AboutComponent,
-    AddStudentComponent
+    AddStudentComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +35,7 @@ import { AddStudentComponent } from './add-student/add-student.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    AgGridModule
+    AgGridModule,
     
   ],
   providers: [AuthService],
