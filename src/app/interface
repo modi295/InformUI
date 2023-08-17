@@ -1,0 +1,10 @@
+export interface IstdData {
+  name: string;
+  fname: number;
+  email:string;
+  house:string;
+  addmission: string;
+  class: string;
+  address: string;
+  contact:string;
+}

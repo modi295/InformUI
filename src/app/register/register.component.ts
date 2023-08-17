@@ -15,6 +15,10 @@ export class RegisterComponent {
   ngOnInit():void{
 
   }
+  list = [
+    {label: 'Male'},
+    {label: 'Female'}
+  ];
   registerForm=new FormGroup({
     user: new FormControl("",[Validators.required]),
     name: new FormControl("",[Validators.required]),

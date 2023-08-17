@@ -14,6 +14,16 @@ export class AddStudentComponent {
   ngOnInit():void{
 
   }
+  list = [
+    {label: 'Indore'},
+    {label: 'Delhi'},
+    {label: 'Pune'},
+    {label: 'Ahemdabad'},
+    {label: 'Mumbai'},
+    {label: 'banglore'},
+    {label: 'Jaipur'},
+    {label: 'Nasik'}
+  ];
   studentForm=new FormGroup({
     name: new FormControl("",[Validators.required]),
     fname: new FormControl("",[Validators.required]),

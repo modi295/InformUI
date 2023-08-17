@@ -28,7 +28,14 @@ export class AuthService {
   getUsers(): Observable < User[] > {  
     return this.http.get < User[] > (this.url+'Student');  
   }  
-  
+public deleteUser(id:any):Observable<any>{
+  return this.http.delete(`${this.url}Student/${id}`);
+}
+
+public updateUser(id:any):Observable<any>{
+  const headers = new HttpHeaders().set('Content-Type', 'application/json');
+ return this.http.put(`${this.url}Student/${id}`,id,{ headers });
+}
 
   getToken(){
     return localStorage.getItem('token');

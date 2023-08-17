@@ -1,12 +1,18 @@
-<div class="d-grid gap-2 d-md-flex justify-content-md-end" style="padding-top: 10px;">
+<div class="d-grid gap-2 d-md-flex justify-content-md" style="padding-top: 10px;padding-left: 10px;">
+  <button class="btn btn-sm btn-info me-md-2"(click)="function()" >Fees Structure</button> 
+  <button class="btn btn-sm btn-info me-md-2" (click)="onSelectionChanged()">Get Selected Nodes</button>
+</div>
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
     <a class="btn btn-sm btn-secondary me-md-2" routerLink="add" role="button">Add Studnet</a>    
-    <button class="btn btn-sm btn-primary me-md-2" >Edit User</button>    
-    <button class="btn btn-sm btn-danger me-md-2" >Delete User</button> 
+    <button class="btn btn-sm btn-primary me-md-2"(click)="editUser()" >Edit User</button>    
+    <button class="btn btn-sm btn-danger me-md-2" (click)="deleteUser()" >Delete User</button> 
   </div>
   <ag-grid-angular 
   style="height: 360px; width: 1500px; padding-left: 20px;padding-top: 20px;"
   class="ag-theme-balham"
   (gridReady)="onGridReady($event)" 
+  [defaultColDef]="defaultColDef"
   [columnDefs]="columnDefs"
   [rowData]="users" 
   rowSelection="single"  
